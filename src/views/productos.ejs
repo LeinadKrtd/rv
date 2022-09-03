@@ -1,0 +1,29 @@
+<%- include ('partials/_header') %>
+<br>
+<div class="container">
+      <h1> Catalogo </h1>
+      <div class="card-columns" id="producto"></div>
+      <script>
+            var imagenes = [24,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,75,76,77,78,79,81];
+            var producto = document.getElementById('producto');
+            for(imagen of imagenes){
+                  producto.innerHTML += `
+                        <div class="card">    
+                              <a href="#" data-toggle="modal" data-target="#id${imagen}">
+                                    <img src="img/${imagen}.png" class="card-img-top">
+                              </a>
+                        </div> 
+                        <!-- Modal -->
+                        <div class="modal fade" id="id${imagen}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                              <button type="button" class="btn-close mr-2" data-dismiss="modal" aria-label="Close"></button>
+
+                              <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                    <img src="img/${imagen}.png" class="img-fluid rounded"> 
+                              </div>
+                        </div>
+                  `
+            }
+      </script>
+</div>
+<%- include ('partials/_footer') %>

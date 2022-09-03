@@ -1,0 +1,296 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	background-image: url('/img/estacion-de-trabajo.jpg');
+	Display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.navbar{
+	width: 100%; 
+	display: flex;
+	position: sticky;
+	top: 0;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.__container{
+	width: 100%;
+	padding: 15px;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+}
+
+.__container > div{
+	border-radius: 5px;
+}
+
+.__container .widget-1{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: span 2;	
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: justify; 
+    font-size: 20px;
+}
+
+ul{
+    margin-left: 100px;
+    font-size: 20px; 
+    text-align: left;
+}
+
+._card{
+	width: 18em;
+    font-size: 20px; 
+    text-align: justify;
+}
+
+._container{
+	padding: 50px;
+
+}
+
+.card-columns{
+	column-count: 4;
+}
+
+footer{
+	margin: 20px;
+	color: black;
+	margin-top: auto;
+	text-align: center;
+}
+
+.pie_pagina{
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+}
+
+.f_logo{
+	width: 100%;
+	height: 100%;
+	grid-column-start: 1;
+	grid-row: span 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.f_logo img{
+	width: 225px;
+	height: 76px;
+}
+
+.f_iconos{
+	width: 100%;
+	height: 100%;
+	grid-column-start: 3;
+	grid-row: span 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.f_iconos a{
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	margin-right: 10px;
+}
+
+.f_enlaces{
+	grid-column-start: 2;
+	grid-row-start: 1;
+}
+
+.f_enlaces a{
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	margin-right: 10px;
+}
+
+.f_frase{
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+
+.container_contactos{
+	margin: 15px;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, auto);
+}
+
+.informacion{
+	grid-column-start: 1;
+	grid-row-start: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ubicacion img{
+	border-radius: 25px;
+	width: 900px;
+	grid-column: span 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card{
+	border-radius: 15px;
+}
+
+.card-header{
+	text-align: center;
+}
+
+input{
+	border-radius: 5px;
+	width: 100%;
+	height: 30px;
+	font-size: 20px;
+}
+
+.boton{
+	text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+
+	.__container{
+		width: 90%;
+		max-width: 1920x;
+		margin: 20px auto;
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, auto);
+	}
+	
+	.__container .widget-1{
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row: span 2;	
+	}
+
+	.footer{
+		font-size: 15px;
+	}
+		
+	ul{
+		margin-left: 0px; 
+	}
+
+	._card{
+		width: min-content;
+		font-size: 10px;
+	}
+
+	.card-columns {
+		column-count: 2;
+	}
+
+	.pie_pagina{
+		display: grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, auto);
+	}
+
+	.f_iconos{
+		grid-column-start: 1;
+		grid-row-start: 1;
+	}
+
+	.f_logo{
+		grid-column-start: 1;
+		grid-row-start: 2;
+	}
+
+	.f_enlaces{
+		grid-column-start: 1;
+		grid-row-start: 3;
+	}
+
+	.f_frase{
+		grid-column-start: 1;
+		grid-row-start: 4;
+	}
+
+	.container_contactos{
+		margin: 10px;
+		display: grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(2, auto);
+	}
+
+	.informacion{
+		grid-column-start: 1;
+		grid-row-start: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.ubicacion img{
+		border-radius: 25px;
+		width: 700px;
+		grid-row-start: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+}
+
+@media screen and (max-width: 512px) {
+	.card-columns {
+		column-count: 1;
+	}
+
+	._card{
+		width: auto;
+		font-size: 10px;
+	}
+
+	h1{ 
+		font-size: 25px;
+	}
+
+	.ubicacion img{
+		border-radius: 25px;
+		width: 450px;
+		grid-row-start: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
